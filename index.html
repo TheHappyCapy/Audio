@@ -5,9 +5,15 @@
 <title>Autoplay Audio</title>
 </head>
 <body>
-<audio controls autoplay>
+<audio id="audio" controls autoplay muted>
   <source src="https://drive.google.com/uc?export=view&id=130N4ggzEUWNHbh5KCUdt_FRP-VfXX3nn" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+<script>
+  // JavaScript to enable unmute button
+  document.getElementById('audio').addEventListener('play', function() {
+    this.muted = false;
+  });
+</script>
 </body>
 </html>
